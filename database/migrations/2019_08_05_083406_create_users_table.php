@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
       $table->date('date_of_birth');
       $table->string('gender');
       $table->integer('contact_number')->unsigned();
+      $table->string('password');
       $table->timestamps();
     });
   }
