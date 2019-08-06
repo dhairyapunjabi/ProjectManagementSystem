@@ -26,7 +26,8 @@ class UserController extends Controller
         'email_id' => $request->email_id,
         'date_of_birth' => $request->date_of_birth,
         'gender' => $request->gender,
-        'contact_number' => $request->contact_number
+        'contact_number' => $request->contact_number,
+        'password' => bcrypt( $request->password )
       ]);
       $user->save();
     }
@@ -44,6 +45,7 @@ class UserController extends Controller
       $user->date_of_birth = $request->date_of_birth;
       $user->gender = $request->gender;
       $user->gender = $request->contact_number;
+      $user->password = bcrypt( $request->password );
       $user->save();
     }
 
