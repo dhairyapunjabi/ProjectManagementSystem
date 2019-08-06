@@ -23,7 +23,7 @@ class UserController extends Controller
       $user = new User([
         'name' => $request->name,
         'designation' => $request->designation,
-        'email_id' => $request->email_id,
+        'email' => $request->email,
         'date_of_birth' => $request->date_of_birth,
         'gender' => $request->gender,
         'contact_number' => $request->contact_number,
@@ -41,7 +41,7 @@ class UserController extends Controller
     {
       $user->name = $request->name;
       $user->designation = $request->designation;
-      $user->email_id = $request->email_id;
+      $user->email = $request->email;
       $user->date_of_birth = $request->date_of_birth;
       $user->gender = $request->gender;
       $user->gender = $request->contact_number;

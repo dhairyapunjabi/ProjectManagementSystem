@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
   protected $fillable = [
-    'title',
-    'team_lead_id'
+    'title'
   ];
+
+  public function users()
+  {
+    return $this->hasMany( 'App\User' );
+  }
 }
