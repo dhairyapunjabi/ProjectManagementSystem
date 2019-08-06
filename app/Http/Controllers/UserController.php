@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('basicAuth');
+    }
+
     public function index()
     {
       $users = User::all();
