@@ -13,5 +13,12 @@ class User extends Model
       'date_of_birth',
       'gender',
       'contact_number'
+      'password',
+      'team_id'
     ];
+
+    public function team()
+    {
+      return this->belongsTo( 'App\Team' );
+    }
 }

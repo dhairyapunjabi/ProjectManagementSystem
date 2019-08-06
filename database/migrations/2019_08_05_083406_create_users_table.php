@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
       $table->string('gender');
       $table->integer('contact_number')->unsigned();
       $table->string('password');
+      $table->bigInteger('team_id')->unsigned()->index()->nullable();
       $table->timestamps();
     });
   }
