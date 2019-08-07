@@ -10,4 +10,9 @@ class Project extends Model
     'name',
     'status'
   ];
+
+  public function users()
+  {
+    return $this->belongsToMany( 'App\User' );
+  }
 }
