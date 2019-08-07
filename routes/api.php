@@ -15,3 +15,7 @@ Route::get( 'team/{team}', 'TeamController@showMembers' );
 Route::resource( 'projects', 'ProjectController' )->except([
   'create', 'edit'
 ]);
+
+Route::post( 'project/addMember/{project}', 'ProjectController@addMember' );
+
+Route::get( 'project/showMembers/{project}', 'ProjectController@showMembers' );

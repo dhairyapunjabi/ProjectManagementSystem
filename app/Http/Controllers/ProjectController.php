@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\User;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -42,5 +43,16 @@ class ProjectController extends Controller
   public function destroy(Project $project)
   {
     $project->delete();
+  }
+
+  public function addMember(Request $request, Project $project)
+  {
+    $member=User::find( $request->id );
+    $project->users()->attach($member);
+  }
+
+  public function showMembers(Project $project)
+  {
+    return $project->users;
   }
 }
