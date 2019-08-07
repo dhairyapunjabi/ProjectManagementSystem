@@ -11,3 +11,7 @@ Route::resource( 'teams', 'TeamController' )->except([
 ]);
 
 Route::get( 'team/{team}', 'TeamController@showMembers' );
+
+Route::resource( 'projects', 'ProjectController' )->except([
+  'create', 'edit'
+]);
