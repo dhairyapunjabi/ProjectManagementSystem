@@ -31,6 +31,12 @@ class TeamController extends Controller
     return $team;
   }
 
+  public function showMembers(Team $team)
+  {
+    $members = $team->users;
+    return $members;
+  }
+
   public function update(Request $request, Team $team)
   {
     $team->title = $request->title;
